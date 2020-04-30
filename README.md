@@ -67,58 +67,58 @@ The use tables are the **songplay_fact**, **time_dim**, **user_dim**, **song_dim
 
  The **time table** which contains:
 
- | Field        | Data Type          | Key       | KEYDIST |
-  |-------------  | ------------- | ------------- | ------------- |
- | start_time      | TIMESTAMP | Primary | SORTKEY/DISTKEY |
- | hour      | INTEGER     |    | |
- | day | INTEGER      |     | |
- | week | INTEGER      |     | |
- | month | INTEGER      |     | |
- | year | INTEGER     |     | |
- | weekday | INTEGER     |     | |
+ | Field        | Data Type          | 
+  |-------------  | ------------- |
+ | start_time      | TIMESTAMP |
+ | hour      | INTEGER     |
+ | day | INTEGER      |  
+ | week | INTEGER      |  
+ | month | INTEGER      |    
+ | year | INTEGER     |   
+ | weekday | INTEGER     |   
 
  The **users table** which contains:
 
- | Field        | Data Type          | Key  | KEYDIST |
- | ------------- | ------------- |  ------------- | ------------- |
- | user_id      | INTEGER | Primary | |
- | first_name      | VARCHAR      |    | |
- | last_name | VARCHAR      |     | |
- | gender | VARCHAR      |     | |
- | level | VARCHAR     |     | |
+ | Field        | Data Type          |
+ | ------------- | ------------- |  
+ | user_id      | INTEGER |
+ | first_name      | VARCHAR      |
+ | last_name | VARCHAR      |
+ | gender | VARCHAR      |  
+ | level | VARCHAR     |  
 
  The **songs table** which contains:
 
- | Field        | Data Type          | Key  | KEYDIST |
- | ------------- | ------------- |  ------------- | ------------- |
- | song_id      | VARCHAR | Primary | |
- | title      | VARCHAR      |    | |
- | artist_id | VARCHAR      |  Foreign Key   | |
- | year | INT      |     | |
- | duration | NUMERIC     |     | |
+ | Field        | Data Type          |
+ | ------------- | ------------- |  
+ | song_id      | VARCHAR |
+ | title      | VARCHAR      |  
+ | artist_id | VARCHAR      |  
+ | year | INT      |  
+ | duration | NUMERIC     |  
 
  The **artists table** which contains:
 
- | Field        | Data Type          | Key  | KEYDIST |
- | ------------- | ------------- |  ------------- | ------------- |
- | artist_id      | VARCHAR | Primary | DISTKEY |
- | name      | VARCHAR      |    | |
- | location | VARCHAR      |    | |
- | latitude | NUMERIC      |     | |
- | longitude | NUMERIC   |     | |
+ | Field        | Data Type          |
+ | ------------- | ------------- |  
+ | artist_id      | VARCHAR |
+ | name      | VARCHAR      |   
+ | location | VARCHAR      |   
+ | latitude | NUMERIC      |  
+ | longitude | NUMERIC   |  
 
  The **songplay table** which contains:
 
- | Field        | Data Type          | Key  | KEYDIST |
- | ------------- | ------------- |  ------------- | ------------- |
- | songplay_id      | INT | Primary | SORTKEY |
- | start_time      | TIMESTAMP    |  Foreign Key  | |
- | user_id | INTEGER  |  Foreign Key   | |
- | song_id | VARCHAR      |  Foreign Key   | |
- | artist_id | VARCHAR     |  Foreign Key   | |
- | session_id | INT  |     | |
- | location | VARCHAR      |     | |
- | user_agent | VARCHAR     |     | |
+ | Field        | Data Type          |
+ | ------------- | ------------- |  
+ | songplay_id      | INT |
+ | start_time      | TIMESTAMP    |  
+ | user_id | INTEGER  |
+ | song_id | VARCHAR      |  
+ | artist_id | VARCHAR     |  
+ | session_id | INT  |  
+ | location | VARCHAR      |
+ | user_agent | VARCHAR     |
 
  ![ERD Diagram](./images/snowflake_erd.PNG)
 
